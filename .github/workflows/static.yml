@@ -29,8 +29,9 @@ jobs:
         run: npm run build
 
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
+          # Ensure this matches the build output directory
           path: ./out
 
   deploy:
