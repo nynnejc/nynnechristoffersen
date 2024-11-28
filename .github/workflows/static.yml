@@ -29,10 +29,10 @@ jobs:
         run: npm run build
 
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
-          # Ensure this matches the build output directory
-          path: ./out
+          name: github-pages
+          path: ./out # Replace with your build output directory
 
   deploy:
     runs-on: ubuntu-latest
@@ -42,5 +42,22 @@ jobs:
       id-token: write
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: all # This downloads the artifact to the 'all' directory
+
+      - name: Merge files
+        run: |
+          # Create the 'dist' directory
+          mkdir dist
+          # Move all content from 'all/*/dist/*' to the 'dist' directory
+          mv all/*/dist/* ./dist
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
+       
