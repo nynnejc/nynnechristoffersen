@@ -28,8 +28,8 @@ jobs:
       - name: Build the Project
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: actions/upload-pages-artifact@v4  # Updated to v4
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v1
         with:
           path: ./out
 
