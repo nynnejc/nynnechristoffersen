@@ -524,6 +524,18 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.-z-10 {
+  z-index: -10;
+}
+.z-10 {
+  z-index: 10;
+}
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -561,6 +573,9 @@ video {
 }
 .flex-grow {
   flex-grow: 1;
+}
+.resize {
+  resize: both;
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));

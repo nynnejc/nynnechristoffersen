@@ -1,20 +1,29 @@
-import React from "react";
+"use client"; 
+import dynamic from "next/dynamic";
 import Navbar from "./components/Navbar";
+
+// Dynamically import CloudBackground (which is now a client-side component)
+const CloudBackground = dynamic(() => import("./components/CloudBackground"), { 
+  ssr: false 
+});
 
 export default function About() {
   return (
-    <body className="flex flex-col sm:flex-row min-h-screen  bg-powder_kc selection:bg-pink-300">
-      <div className="sm:order-2">
+    <div className="flex flex-col sm:flex-row min-h-screen bg-powder_kc selection:bg-pink-300">
+      <div className="sm:order-2 z-10">
         <Navbar />
-      </div>
-      <main className="flex-grow sm:order-1">
+        </div>
+        <div className="-z-10">
+          <CloudBackground />
+        </div>
+      
+      <main className="flex-grow sm:order-1 z-10">
         <div className="custom-font-dauphine leading-10 sm:mx-4 mx-6 sm:w-5/6 my-4">
           <p className="text-3xl sm:text-5xl">
             Hi I&apos;m Nynne Just Christoffersen and this is my blog. I am a
-            software developer, teacher, writer and occasional podcaster with
+            software developer, teacher, writer, and occasional podcaster with
             too many hobbies.
           </p>
-
           <p className="mt-6 text-3xl sm:text-5xl">
             I created this blog to share my writing. Happy to hear about the
             cool project you&apos;ve made or any ideas you want to share. You
@@ -55,7 +64,7 @@ export default function About() {
             .
           </p>
           <p className="mt-6 text-3xl sm:text-5xl">
-            I built this MD template blog myself with React, Next and Typescript
+            I built this MD template blog myself with React, Next, and Typescript
             and also made a CD pipeline for it on Github. Someday I&apos;ll
             write a post about how I did it! All the visual design was made by{" "}
             <a
@@ -63,10 +72,12 @@ export default function About() {
               target="_blank"
               rel="noopener noreferrer"
               className="underline decoration font-mono text-red_kc hover:linkunderline"
-            >AK</a>.
+            >
+              AK
+            </a>.
           </p>
         </div>
       </main>
-    </body>
+    </div>
   );
 }
