@@ -5,18 +5,18 @@ on:
     branches: [main]
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write  # Required to push to the gh-pages branch
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # Step 2: Set up Node.js and build the project
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -28,15 +28,25 @@ jobs:
       - name: Build the Project
         run: npm run build
 
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./out # Adjust this to the directory containing your built files
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
+      # Step 3: Deploy the static files to gh-pages
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        run: |
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Create a new branch for GitHub Pages
+          git switch --orphan gh-pages
+
+          # Remove all existing files (if any) from the branch
+          git rm -rf . --ignore-unmatch
+
+          # Copy the static files to the root
+          cp -r ./out/* .  # Adjust "./out" to your build output directory
+
+          # Add and commit changes
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+
+          # Force-push to the gh-pages branch
+          git push --force origin gh-pages
