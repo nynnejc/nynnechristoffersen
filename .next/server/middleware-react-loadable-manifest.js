@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST="{\"app/page.tsx -> ./components/CloudBackground\":{\"id\":\"app/page.tsx -> ./components/CloudBackground\",\"files\":[\"static/chunks/_app-pages-browser_app_components_CloudBackground_tsx.js\"]}}"
