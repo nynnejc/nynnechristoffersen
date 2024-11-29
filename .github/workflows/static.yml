@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 permissions:
-  contents: write  # Required to push to the gh-pages branch
+  contents: write  # Required to push to gh-pages branch
 
 jobs:
   deploy:
@@ -16,37 +16,25 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js and build the project
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build the Project
-        run: npm run build
-
-      # Step 3: Deploy the static files to gh-pages
+      # Step 2: Deploy static files to GitHub Pages
       - name: Deploy to GitHub Pages
         run: |
           # Configure git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Create a new branch for GitHub Pages
+          # Switch to an orphan gh-pages branch
           git switch --orphan gh-pages
 
-          # Remove all existing files (if any) from the branch
+          # Remove all existing files
           git rm -rf . --ignore-unmatch
 
-          # Copy the static files to the root
-          cp -r ./out/* .  # Adjust "./out" to your build output directory
+          # Copy static files to the root
+          cp -r ./public/* .  # Adjust ./public to the folder with your static files
 
           # Add and commit changes
           git add .
-          git commit -m "Deploy to GitHub Pages"
+          git commit -m "Deploy static site to GitHub Pages"
 
-          # Force-push to the gh-pages branch
+          # Force-push to gh-pages branch
           git push --force origin gh-pages
