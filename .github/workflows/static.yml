@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 permissions:
-  contents: write  # Required to push to gh-pages branch
+  contents: write  
 
 jobs:
   deploy:
@@ -30,7 +30,7 @@ jobs:
           git rm -rf . --ignore-unmatch
 
           # Copy static files to the root
-          cp -r ./public/* .  # Adjust ./public to the folder with your static files
+          cp -r ./* .  # Adjust `./` if files are in a specific folder like `static/`
 
           # Add and commit changes
           git add .
