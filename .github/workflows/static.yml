@@ -16,22 +16,25 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Step 3: Deploy static files to GitHub Pages
+      # Step 2: Deploy Pre-Built Files to GitHub Pages
       - name: Deploy to GitHub Pages
         run: |
           # Configure git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Switch to an orphan gh-pages branch
+          # Switch to gh-pages branch
           git switch --orphan gh-pages
 
-          # Remove all existing files (from the branch, not local)
+          # Remove any existing files
           git rm -rf . --ignore-unmatch
 
-          # Add and commit all files (already in the root)
+          # Copy all files from the repository root to the deployment
+          cp -R ./public/* .
+
+          # Add and commit all files
           git add .
           git commit -m "Deploy static site to GitHub Pages"
 
-          # Force-push to gh-pages branch
+          # Push to gh-pages branch
           git push --force origin gh-pages
