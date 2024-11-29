@@ -16,10 +16,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Step 2: Debug file structure (optional, for verification)
-      - name: Debug: List Files
-        run: ls -R
-
       # Step 3: Deploy static files to GitHub Pages
       - name: Deploy to GitHub Pages
         run: |
