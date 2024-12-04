@@ -38,24 +38,27 @@ p a:hover {
     background: #FFB2D9;
   }
 
-.hello-container {
+.container-body {
     display: flex;
     flex-wrap: wrap;
-    font-size: 30px;
     text-align: left;
 }
 
-.hello-text {
+.korpus-text {
     padding: 10px;
-    font-size: clamp(22px, 4vw, 32px);
+    font-size: clamp(22px, 23px, 25px);
 }
 
-.hello-space {
+.container-space {
     padding: 10px;
 }
 
 .gradient {
     background-image: linear-gradient(#4659E1, #C99BB1, #B7D1C8, #A0FA05);
+}
+
+.courses {
+    background-color: #ffdefa;
 }
 
 .nav {
@@ -123,10 +126,10 @@ p a:hover {
 }
 
 @media only screen and (max-width: 767px) {
-    .hello-text {
+    .korpus-text {
         width: 100%;
     }
-    .hello-space {
+    .container-space {
         display: none;
     }
     .nav {
@@ -158,19 +161,25 @@ p a:hover {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .hello-text {
+    .korpus-text {
         width: 90%;
     }
-    .hello-space {
+    .container-space {
         width: 10%;
+    }
+    .box-menu {
+        display: none;
     }
 }
 
 @media only screen and (min-width: 1024px) {
-    .hello-text {
+    .korpus-text {
         width: 70%;
     }
-    .hello-space {
+    .container-space {
         width: 30%;
+    }
+    .box-menu {
+        display: none;
     }
 }
