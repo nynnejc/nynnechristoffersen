@@ -148,13 +148,17 @@ ul {
 
 .nav li a:hover {
     color: transparent;
-    text-shadow: 0 0 3px rgb(229,228,21);
+    text-shadow: 0 0 3px rgb(243, 243, 168);
 }
 
 hr { 
     color: black;
     size: 5px;
-} 
+}
+
+footer {
+    padding-top:10%;
+}
 
 @media only screen and (max-width: 400px) {
     .nav {
@@ -174,15 +178,14 @@ hr {
         width: 50px;
         height: 50px;
         background-color: white;
-        border: 2px solid black;
-        border-radius: 2px;
     }
 
     .box-menu a {
         text-decoration: none;
-        font-size: 35px;
+        font-size: 30px;
         font-weight: bolder;
         color: black;
+        text-align: left;
     }
 
 }
@@ -213,13 +216,11 @@ hr {
         width: 50px;
         height: 50px;
         background-color: white;
-        border: 2px solid black;
-        border-radius: 2px;
     }
 
     .box-menu a {
         text-decoration: none;
-        font-size: 35px;
+        font-size: 25px;
         font-weight: bolder;
         color: black;
     }
