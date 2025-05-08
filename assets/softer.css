@@ -2,9 +2,9 @@
     font-family: 'whoismono';
     src: url('./fonts/whois-mono.eot');
     src: url('./fonts/whois-mono.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/whois-mono.woff') format('woff'),
-         url('./fonts/whois-mono.ttf') format('truetype'),
-         url('./fonts/whois-mono.svg#whoismono') format('svg');
+        url('./fonts/whois-mono.woff') format('woff'),
+        url('./fonts/whois-mono.ttf') format('truetype'),
+        url('./fonts/whois-mono.svg#whoismono') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -49,7 +49,7 @@ h1 {
 h2 {
     font-family: 'whoismono';
     margin-top: 7%;
-    color:#FF3B0F;
+    color: #FF3B0F;
 }
 
 p {
@@ -68,12 +68,12 @@ p a:hover {
 ::-moz-selection {
     background: #FFB2D9;
     text-decoration: underline;
-  }
-  
-  ::selection {
+}
+
+::selection {
     background: #FFB2D9;
     color: #FF3B0F;
-  }
+}
 
 .landing {
     display: flex;
@@ -110,33 +110,34 @@ p a:hover {
     height: 300px;
     background-color: #FF3B0F;
     border-radius: 50%;
-  }
+}
 
-  .circle-purple {
+.circle-purple {
     width: 300px;
     height: 300px;
     background-color: #cb8dd7;
     border-radius: 50%;
-  }
+}
 
-  .circle-orange {
+.circle-orange {
     width: 300px;
     height: 300px;
     background-color: #e4846f;
     border-radius: 50%;
-  }
+}
 
-  .circle-pink {
+.circle-pink {
     width: 300px;
     height: 300px;
     background-color: #FFB2D9;
     border-radius: 50%;
-  }
+}
 
 @media only screen and (max-width: 767px) {
     .korpus-text {
         width: 100%;
     }
+
     .container-space {
         display: none;
     }
@@ -146,6 +147,7 @@ p a:hover {
     .korpus-text {
         width: 90%;
     }
+
     .container-space {
         width: 10%;
     }
@@ -155,6 +157,7 @@ p a:hover {
     .korpus-text {
         width: 70%;
     }
+
     .container-space {
         width: 30%;
     }
@@ -171,10 +174,11 @@ p a:hover {
     align-items: center;
     font-size: 2rem;
     position: relative;
-  }
+}
 
-  .nav-button {
-    position: absolute; /* not fixed! */
+.nav-button {
+    position: absolute;
+    /* not fixed! */
     top: 50%;
     transform: translateY(-50%);
     font-size: 3rem;
@@ -185,44 +189,57 @@ p a:hover {
     z-index: 10;
     padding: 0 0.5rem;
     opacity: 0.7;
-  }
-  
-  .nav-button:hover {
+}
+
+.nav-button:hover {
     opacity: 1;
     color: blue;
-  }
-  
-  .nav-prev {
-    left: 1rem;
-  }
-  
-  .nav-next {
-    right: 1rem;
-  }
-  
+}
 
-  .slide.active {
+.nav-prev {
+    left: 1rem;
+}
+
+.nav-next {
+    right: 1rem;
+}
+
+
+.slide.active {
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .slide-1 {
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.image-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-1 {
     background: #f8d5d5;
-  }
+}
 
-  .slide-2 {
+.slide-2 {
     background: #ede7c5;
-  }
+}
 
-  .slide-3 {
+.slide-3 {
     background: #82b4e3;
-  }
+}
 
-  .slide-4 {
+.slide-4 {
     background: #cfc9f4;
-  }
+}
 
-  .slide-5 {
-    background: #e4846f;
-  }
-
+.slide-5 {
+    background: #ffff;
+}
