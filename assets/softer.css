@@ -98,49 +98,102 @@ p a:hover {
     justify-content: center;
 }
 
-.circle-blue {
+.img-circles {
+    width: 300px; 
+    height: 300px; 
+    overflow: hidden; 
+    border-radius: 50%;
+}
+
+.img-circles img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.colored-circles{
     width: 300px;
     height: 300px;
-    background-color: #82b4e3;
     border-radius: 50%;
+}
+
+.circle-blue {
+    background-color: #82b4e3;
 }
 
 .circle-red {
-    width: 300px;
-    height: 300px;
     background-color: #FF3B0F;
-    border-radius: 50%;
 }
 
 .circle-purple {
-    width: 300px;
-    height: 300px;
     background-color: #cb8dd7;
-    border-radius: 50%;
 }
 
 .circle-orange {
-    width: 300px;
-    height: 300px;
     background-color: #e4846f;
-    border-radius: 50%;
 }
 
 .circle-pink {
-    width: 300px;
-    height: 300px;
     background-color: #FFB2D9;
-    border-radius: 50%;
 }
 
 @media only screen and (max-width: 767px) {
-    .korpus-text {
-        width: 100%;
+    .top-intro {
+        flex-direction: column-reverse;
     }
 
-    .container-space {
-        display: none;
+    .img-circles {
+        width: 100px; 
+        height: 100px; 
+        overflow: hidden; 
+        border-radius: 50%;
     }
+    
+    .img-circles img {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+    }
+    
+    .colored-circles{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .slide {
+        height: auto;
+        min-height: 100vh;
+        padding: 1rem;
+        overflow-y: auto;
+    }
+
+    .slide img {
+        object-fit: contain;
+        max-width: 100%;
+        height: auto !important;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .image-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-button {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+    
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -216,6 +269,7 @@ p a:hover {
     align-items: center;
     gap: 1.5rem;
 }
+
 
 .image-row {
     display: flex;
