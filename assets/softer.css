@@ -99,15 +99,15 @@ p a:hover {
 }
 
 .img-circles {
-    width: 300px; 
-    height: 300px; 
-    overflow: hidden; 
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
     border-radius: 50%;
 }
 
 .img-circles img {
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     cursor: pointer;
     border: 0.4px solid #5a48f5;
@@ -115,19 +115,19 @@ p a:hover {
     border-radius: 50%;
 }
 
-a.img-circles > img:hover {
+a.img-circles>img:hover {
     filter: drop-shadow(0 0 50px rgba(255, 178, 217)) blur(20px);
     border: 10px solid #FF3B0F;
     border-radius: 50%;
- }
+}
 
- .colored-circles:hover  {
+.colored-circles:hover {
     border-radius: 50%;
     filter: drop-shadow(0 0 50px rgba(255, 178, 217)) blur(20px);
     border: 10px solid #FF3B0F;
- }
+}
 
-.colored-circles{
+.colored-circles {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -160,32 +160,32 @@ a.img-circles > img:hover {
         flex-direction: column-reverse;
     }
 
-    .img-circles {
-        width: 100px; 
-        height: 100px; 
-        overflow: hidden; 
+    /* .img-circles {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
         border-radius: 50%;
     }
-    
+
     .img-circles img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 100%;
         filter: drop-shadow(0 0 5px rgba(90, 72, 245, 0.3));
-      }
-    
-      a.img-circles > img:hover {
+    }
+
+    a.img-circles>img:hover {
         filter: drop-shadow(0 0 50px rgba(255, 178, 217)) blur(20px);
-      }
-    
-    .colored-circles{
+    }
+
+    .colored-circles {
         width: 100px;
         height: 100px;
         border-radius: 50%;
-    }
+    } */
 
- 
+
 
     h1 {
         font-size: 2rem;
@@ -206,7 +206,21 @@ a.img-circles > img:hover {
         font-size: 2rem;
         padding: 1rem;
     }
-    
+
+}
+
+.lille {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .stor {
+        display: none;
+    }
+
+    .lille {
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -245,7 +259,7 @@ a.img-circles > img:hover {
     font-size: 2rem;
     position: relative;
     overflow: hidden;
-  }
+}
 
 .nav-button {
     position: absolute;
@@ -286,15 +300,15 @@ a.img-circles > img:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+}
 
 
-  .image-row {
+.image-row {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
 .slide-1 {
     background: #f9f5f5;
@@ -315,27 +329,35 @@ a.img-circles > img:hover {
 .slide-5 {
     background: #f9f5f5;
 }
+
 .slide-6 {
     background: #f9f5f5;
 }
+
 .slide-7 {
     background: #f9f5f5;
 }
+
 .slide-8 {
     background: #ffff;
 }
+
 .slide-9 {
     background: #ffff;
 }
+
 .slide-10 {
     background: #f9f5f5;
 }
+
 .slide-11 {
     background: #f9f5f5;
 }
+
 .slide-12 {
     background: #f9f5f5;
 }
+
 .slide-13 {
     background: #f9f5f5;
 }
