@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'cofesans';
+    src: url('./assets/fonts/cofesans/cofesans-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fiato';
+    src: url('./assets/fonts/Fiato.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fiato', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  .frontpage-text {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+  
+  #canvas {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+
+  h1 {
+    font-family: 'cofesans', sans-serif;
+    font-size: clamp(4.5rem, 8vw, 6rem);
+  }
+
+  h2 {
+    font-family: 'cofesans', sans-serif;
+    font-size: clamp(3rem, 6vw, 4rem);
+  }
+  p {
+    font-family: 'Fiato', sans-serif;
+   font-size: clamp(2.5rem, 4vw, 3rem);  /* (min size, preferred size based on virwport, max size) */
+  }
+
+  p a:hover {
+    color: blue;
+}
+
+::selection {
+    background: blue;
+    color: #FF3B0F;
+}
