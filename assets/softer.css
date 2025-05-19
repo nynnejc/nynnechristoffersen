@@ -199,7 +199,6 @@ a.img-circles>img:hover {
 
     .image-row {
         flex-direction: column;
-        gap: 1rem;
     }
 
     .nav-button {
@@ -213,35 +212,81 @@ a.img-circles>img:hover {
     display: none;
 }
 
+
 @media (max-width: 600px) {
+    .lille {
+        display: block;
+        text-align: center;
+    }
+
+    .stor {
+        display: none;
+    }
+
+    .lille img {
+        width: 90vw;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
+
+/* Desktop & Tablet */
+@media (min-width: 768px) {
+    .image-row {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+
+    .image-row > .stor {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-row img,
+    .image-row video {
+        height: 80vh; /* Make them big! adjust as needed */
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .lille {
+        display: none !important;
+    }
+
+    .stor {
+        display: flex !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .image-row {
+        flex-direction: column;
+    }
+
     .stor {
         display: none;
     }
 
     .lille {
         display: block;
+        text-align: center;
+    }
+
+    .lille img {
+        width: 90vw;
+        height: auto;
+        object-fit: contain;
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .korpus-text {
-        width: 90%;
-    }
-
-    .container-space {
-        width: 10%;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    .korpus-text {
-        width: 70%;
-    }
-
-    .container-space {
-        width: 30%;
-    }
-}
 
 .slide img {
     object-fit: contain;
@@ -252,7 +297,7 @@ a.img-circles>img:hover {
     display: none;
     width: 100vw;
     height: 100vh;
-    padding: 2rem;
+    padding: 0;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -304,11 +349,34 @@ a.img-circles>img:hover {
 
 
 .image-row {
-    flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
 }
+
+.image-row > div {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.image-row img,
+.image-row video {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 
 .slide-1 {
     background: #f9f5f5;
