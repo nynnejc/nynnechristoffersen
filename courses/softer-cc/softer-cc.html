@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charSet="utf-8" />
+    <link rel="stylesheet" href="./assets/style/softer-cc.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Softer Creative Coding</title>
+</head>
+
+<body>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <div class="layout">
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="./index-cc.html">Index</a>
+                <a href="./softer-cc.html">p5.js</a>
+                <a href="./resources-cc.html">Resources</a>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div id="canvas">
+
+                <div class="frontpage-text">
+                    <div class="headlines">
+                        <h1>Softer Creative Coding</h1>
+                        <h2>With p5.js May 2025</h2>
+                    </div>
+
+                    <div class="text-block">
+                        <h3>p5.js</h3>
+                        <p>Let's learn p5.js!</p>
+                        <p>Welcome to this pocket-sized intro guide. For more materials and tutorials, see <a
+                                href="./resources-cc.html">Resources</a>.</p>
+                        <p>p5.js is an:</p>
+                        <ul>
+                            <li>
+                                <p>Open source visual programming language.</p>
+                            </li>
+                            <li>
+                                <p>A dialect of the language JavaScript.
+                            </li>
+                            <li>
+                                <p>In family with the visual language Processing.</p>
+                            </li>
+                            <li>
+                                <p>An open community that anyone can contribute to!</p>
+                            </li>
+                        </ul>
+                        <p>p5.js is a library that lets you draw graphic shapes and interactive graphic design and
+                            generative art for the screen, with code.</p>
+                        <p>p5 is fun because it's made for the web. You can easily put it into a simple website, like I
+                            have done here with the background!</p>
+                    </div>
+
+                    <div class="text-block">
+                        <h3>The p5.js EDITOR</h3>
+                        <p>One of the cool things about p5.js is that it comes with this really nice online editor.
+                            Look, I can even embed drawings straight into HTML & CSS like so:</p>
+                        <iframe style="width: 500px; height: 400px; overflow: hidden;" scrolling="no"
+                            src="https://editor.p5js.org/nynnejc/full/B3FTOHtOc"></iframe>
+                        <p>Please enjoy this messy 3D flower I made last time I did at another workshop with SOFTER a
+                        <p><b>Always remeber to log on and save sketches! </b><a href="https://editor.p5js.org"
+                                target="_blank" rel="noopener noreferrer">editor.p5js.org</a>.</p>
+
+                    </div>
+
+                    <div class="text-block">
+                        <h3>Code block() {}</h3>
+                        <p>When we say code black, what we is all the code you put inside the curly braces {}</p>
+                        <p>Example:</p>
+                        <div class="code-block">
+                            <p class="code-text">
+                                function setup() {
+                            </p>
+                            <p class="code-text">
+                                &#8198; &#8198;createCanvas(400, 200); // this is inside the 1st block
+                            </p>
+                            <p class="code-text">
+                                }</p>
+                            <p class="code-text">
+                                function draw() {</p>
+                            <p class="code-text">
+                                &#8198; &#8198;background(220); // this is inside the 2nd block</p>
+                            <p class="code-text">
+                                }</p>
+                        </div>
+                        <p>If you're not familiar with coding, you may be surprised at how little error it takes to
+                            throw off the computer. forgetting just one little closing parenthethes can break the whole
+                            thing!</p>
+                    </div>
+
+
+                    <div class="text-block">
+                        <h3>setup()</h3>
+                        <p>p5.js has its own syntax and built-in methods that we will usually always apply to our
+                            drawing. <b>We know that something is a method whern we see it ending with()</b>
+                        </p>
+                        <p>One of these is called setup()</p>
+                        <p>Here we put any code that is involved with setting up the initial state of your program: size
+                            of you graphics, canvas, the weight of your stroke or the speed of your program.</p>
+                        <p>Example:</p>
+
+                        <div class="code-block">
+                            <p class="code-text">
+                                function setup() {
+                            </p>
+                            <p class="code-text">
+                                &#8198; &#8198; createCanvas(400, 200); // Setting up size of our drawing</p>
+                            <p class="code-text">
+                                }</p>
+                        </div>
+                    </div>
+
+                    <div class="text-block">
+                        <h3>draw()</h3>
+                        <p>draw() is where all the code goes that is involved with drawing to the screen: setting
+                            background color, drawing shapes etc.</p>
+                        <p>Example:</p>
+
+                        <div class="code-block">
+                            <p class="code-text">
+                                function draw() {
+                            </p>
+                            <p class="code-text">
+                                &#8198; &#8198; background(220); // setting a background color (gray)</p>
+                            <p class="code-text">
+                                }</p>
+                        </div>
+                    </div>
+
+                    <div class="text-block">
+                        <h3>Our first sketch</h3>
+                        <p>Let's recap what we need in order to make our first drawing with p5.js:</p>
+
+                        <P><b>setup()</b> Is called as the first thing when the program runs. Usually contains
+                            start variables and functions e.g. Background color and screen size. Can only be called
+                            once.</P>
+                        <P><b>createCanvas()</b> Called only once. Must be placed in the setup() function. Creates
+                            a canvas with dimensions in pixels. Without parameters, canvas becomes 100x100 pixels.
+                        </P>
+                        <P><b>draw()</b> Runs the code inserted in the body in a loop until noLoop() is called.
+                        </P>
+                        <P><b>background()</b> Sets the background color. If not used, the background is
+                            transparent. A number is understood as grayscale and string as CSS color. Three
+                            parameters RGB (default), HSB or HSL.</P>
+
+                    </div>
+
+
+
+
+
+                    <div class="text-block">
+                        <h3>Basic Shapes</h3>
+                        <P><B>line()</B></P>
+                        <ul>
+                            <li>Syntax: line(x1, y1, x2, y2)</li>
+                            <li>Draws a line</li>
+                            <li>Has no weight / size and therefore cannot use fill(). Instead, use stroke() to change
+                                the
+                                color and strokeWeight() to change the width of the line.</li>
+                        </ul>
+                        <P><B>circle()</B></P>
+                        <ul>
+                            <li>Syntax: circle(x, y, d)</li>
+                            <li>Draws a circle</li>
+                            <li>The first two parameters define the location of the center of the circle. Third
+                                parameter
+                                defines the diameter of the circle.</li>
+                            <li>Alternative to ellipse()</li>
+                        </ul>
+                        <P><B>square()</B></P>
+                        <ul>
+                            <li>Syntax: square(x, y, d)</li>
+                            <li> Draws a square</li>
+                            <li>The first two parameters define the location of the square's upper left corner. Third
+                                parameter defines the length of the side of the square.</li>
+                            <li>Alternative to rect()</li>
+                        </ul>
+
+
+                        <iframe style="width: 400px; height: 200px; overflow: hidden;" scrolling="no"
+                            src="https://editor.p5js.org/nynnejc/full/gnxN6tWWX"></iframe>
+                        <p>There are some handy functions for basic shapes that we can use.</p>
+
+                        <div class="code-block">
+                            <p class="code-text">
+                                function setup() {
+                            </p>
+                            <p class="code-text">
+                                &#8198; &#8198;createCanvas(400, 200);
+                            </p>
+                            <p class="code-text">
+                                }</p>
+                            <p class="code-text">
+                                function draw() {</p>
+                            <p class="code-text">
+                                &#8198; &#8198;background(220);</p>
+                            <p class="code-text">
+                                &#8198; &#8198;ellipse(50, 100, 50);</p>
+                            <p class="code-text">
+                                &#8198; &#8198; line(100, 50, 150, 150);</p>
+                            <p class="code-text">
+                                &#8198; &#8198; triangle(300, 100, 350, 150, 400, 100);</p>
+                            <p class="code-text">
+                                &#8198; &#8198;background(220);</p>
+                            <p class="code-text">
+                                }</p>
+                        </div>
+
+                        <p>Notice how each method takes arguments inside the (). For example here:</p>
+                        <p>ellipse(50, 100, 50);</p>
+                        <p>Go to the <a href="https://p5js.org/reference/p5/ellipse/" target="_blank" rel="noopener noreferrer">Ellipse
+                                documentation</a> to find
+                            out what each number means, or try it out yourself to see if you can make the circle bigger,
+                            smaller, place it in a different spot ot change its color.</p>
+
+                    </div>
+
+
+                    <div class="text-block">
+                        <h3>Assignment 1</h3>
+                        <p>Using only the basic shapes you just learned how to make, try to draw in code! Do it
+                            inside the <a href="https://editor.p5js.org/" target="_blank" rel="noopener noreferrer">p5js online editor</a>.
+                        </p>
+                        <p>The idea of ​​the exercise is that you must use all the p5.js functions you have been
+                            introduced to in the lessons so far. So setup(), createCanvas() , draw() , background() ,
+                            ellipse() or circle() , rect() or square() and line(). </p>
+                        <p>Assignment can be found <a
+                                href="https://docs.google.com/presentation/d/1AAo5QTxl4vlwgXGT-HdYWn5ZYdlgMBF6XUJ6jdk881Y/edit?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">HERE</a>.
+                        </p>
+                        <p><b>Remember to sign up and log in!</b> Don’t lose your code.</p>
+                    </div>
+
+                    <div class="text-block">
+                        <h3>Movement and Interactivity</h3>
+                        <p>How do we make something move?</p>
+                        <ol>
+                            <li>Re-positioning our form</li>
+                            <li> Using our draw() function's loop</li>
+                        </ol>
+
+                        <p>How do we make something interactive?</p>
+                        <ol>
+                            <li>Take input from mouse or keyboard</li>
+                            <li> Use built-in I/O functions and variables in p5.js, for example mouseIsPressed</li>
+                        </ol>
+                    </div>
+
+                    <div class="text-block">
+                        <h3>Assignment 2</h3>
+                        <p>The idea of ​​the exercise is that we should try to get shapes moving either by themselves,
+                            by using lopped in draw() and re-positioning the shape's position, or through interaction
+                            with our mouse/trackpad, by using mouseX and mouseY .</p>
+                        <p>Assignment can be found <a
+                                href="https://docs.google.com/presentation/d/15cTQ0mJVWvfiO4GguKBX5eFprHxGu1NZWakQ-8Sw4Ng/edit?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">HERE</a>.
+                        </p>
+                    </div>
+
+                    <div class="text-block">
+                        <h3>MouseX, MouseY</h3>
+                        <iframe style="width: 400px; height: 200px; overflow: hidden;" scrolling="no"
+                            src="https://editor.p5js.org/nynnejc/full/Irs9cqdNd"></iframe>
+
+                        <p>We can make our drawing interactive, by using the placement of the mouse.</p>
+
+                        <div class="code-block">
+                            <p class="code-text">
+                                function setup() {
+                            </p>
+                            <p class="code-text">
+                                &#8198; &#8198;createCanvas(400, 200);
+                            </p>
+                            <p class="code-text">
+                                }</p>
+                            <p class="code-text">
+                                function draw() {</p>
+                            <p class="code-text">
+                                &#8198; &#8198;background(220);</p>
+                            <p class="code-text">
+                                &#8198; &#8198;ellipse(mouseX, mouseY, 50);</p>
+                            <p class="code-text">
+                                }</p>
+                        </div>
+                    </div>
+
+
+                    <div class="text-block">
+                        <h3>Assignment 3</h3>
+                        <p>Let's make a drawing that uses the mouse coordinates in some kind of way.</a>.
+                        </p>
+                        <p>If you are looking for inspiration, try looking at Alma's code and see what happens when you
+                            change different values in the code, both colours, sizes, shapes and placements. Play around
+                            and experiment to get a feel of what the different parameters to methods all do.</p>
+                        <iframe <iframe style="width: 500px; height: 500px; overflow: hidden;" scrolling="no"
+                            src="https://editor.p5js.org/nynnejc/full/S8197vBDm"></iframe>
+
+                    </div>
+
+
+                    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+                    <script src="sketch.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('mousedown', function (e) {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navbar = document.querySelector('.navbar');
+            const burger = document.querySelector('.burger');
+
+            const clickedInsideNavbar = navbar.contains(e.target);
+            const clickedOnBurger = burger.contains(e.target);
+
+            if (menuToggle.checked && !clickedInsideNavbar && !clickedOnBurger) {
+                menuToggle.checked = false;
+            }
+        });
+    </script>
+</body>
+
+</html>

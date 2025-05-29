@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/style/style-cc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softer Creative Coding Course</title>
+</head>
+
+<body>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <div class="layout">
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="./index-cc.html">Index</a>
+                <a href="./softer-cc.html">p5.js</a>
+                <a href="./resources-cc.html">Resources</a>
+            </div>
+        </nav>
+
+        <div class="content-area">
+            <div class="top-index">
+                <h1 class="headline">Softer Creative Coding Spring 2025</h1>
+            </div>
+            <div class="hello-box">
+                <p>
+                    This website contains the materials for a series of workshops held by <a
+                        href="https://nynnechristoffersen.com/">Nynne</a> in the spring of 2025 with <a
+                        href="https://www.softer.global/">SOFTER</a> in Copenhagen. These events introduces creative
+                    coding with the visual coding framework P5.js (using the JavaScript
+                    programming language). You will get to try your hand at using the basic building blocks of
+                    programming to
+                    draw and animate with code! The event is suitable for absolute beginners, but we can also try to
+                    accomodate
+                    if you come with more experience and are looking for inspiration for the next steps in your
+                    learning.
+                </p>
+            </div>
+            <div class="shadow-of-shadows">
+                <h3>Acknowledgements</h3>
+                <p>This syllabus and course material on this page has a number of sources to thank:</p>
+                <ul>
+                    <li>
+                        <p><a href="https://lauren-mccarthy.com/Info" target="_blank" rel="noopener noreferrer">Lauren
+                                Lee McCarthy</a> for inventing and creating
+                            p5.js!
+                            And for
+                            building the community behind the <a href="https://p5js.org/tutorials/" target="_blank"
+                                rel="noopener noreferrer">beginnder-friendly
+                                tutorial
+                                guide</a>.</p>
+                    </li>
+                    <li>
+                        <p>Edith Terte Andersen, for offering me her own p5.js course material as inspiration.</p>
+                    </li>
+                    <li>
+                        <p><a href="https://thecodingtrain.com/" target="_blank" rel="noopener noreferrer">Daniel
+                                Schiffman</a> for his coding train material,
+                            general approach to learning and teaching and particularly his newest book <a
+                                href="https://natureofcode.com/" target="_blank" rel="noopener noreferrer">Nature of
+                                Code</a>.</p>
+                    </li>
+
+                    <li>
+                        <p><a href="https://www.softer.global/" target="_blank" rel="noopener noreferrer">SOFTER</a> of
+                            course for hosting and bringing together!
+                        </p>
+                    </li>
+                    <li>
+                        <p><a href="https://handmade-web.net/resources.html" target="_blank"
+                                rel="noopener noreferrer">Handmade Web School</a>, a great list of
+                            learning resources for makign websites.</p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.andreasrefsgaard.dk/" target="_blank" rel="noopener noreferrer">Andreas
+                                Refsgaard</a>'s Creative Coding material.</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>

@@ -3,27 +3,27 @@ let altColors;
 let circleRadius;
 
 function setup() {
-  createCanvas(windowWidth, document.body.scrollHeight);
+  createCanvas(windowWidth, windowHeight);
   noStroke();
   setCircleRadius();
 
   bgColors = {
-    tl: '#FFA4E0',  // top-left pink
+    tl: '#ebc9f2',  // top-left lilla
     tr: '#F3EEEA',  // top-right hvid
-    bl: '#ebc9f2',  // bottom-left lilla
-    br: '#F3EEEA'   // bottom-right hvid
+    br: '#F3EEEA',  // bottom-right hvid
+    bl: '#FFA4E0'  // bottom-left pink
   };
 
   altColors = {
-    tl: '#FF3B0F',  // rød
-    tr: '#FED009',  // gul
-    bl: '#FFA4E0',  // pink
-    br: '#FED009'   // gul
+    tl: '#F3EEEA',  // hvid
+    tr: '#FFA4E0',  // pink
+    br: '#FFA4E0',  // pink
+    bl: '#FF3B0F'  // rød
   };
 }
 
 function draw() {
-  clear(); // prevent drawing buildup
+  clear();
 
   if (window.scrollY < 100) {
     drawQuadrants(bgColors);
@@ -47,8 +47,8 @@ function drawQuadrants(colors) {
 function drawHalves(colors) {
   let midX = width / 2;
 
-  fill(colors.tl); rect(0, 0, midX, height);      // Left half
-  fill(colors.tr); rect(midX, 0, midX, height);   // Right half
+  fill(colors.tl); rect(0, 0, midX, height);     
+  fill(colors.tr); rect(midX, 0, midX, height);  
 }
 
 function drawFilteredCircle() {
@@ -62,9 +62,9 @@ function drawFilteredCircle() {
   drawingContext.clip();
 
   if (window.scrollY < 100) {
-    drawQuadrants(altColors); // inside circle: alt quadrants
+    drawQuadrants(altColors); 
   } else {
-    drawHalves(altColors);    // inside circle: alt halves
+    drawHalves(altColors);  
   }
 
   drawingContext.restore();
@@ -72,7 +72,7 @@ function drawFilteredCircle() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, document.body.scrollHeight);
+  resizeCanvas(windowWidth, windowHeight);
   setCircleRadius();
 }
 
