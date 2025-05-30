@@ -63,7 +63,7 @@ function draw() {
     let pacing = sin(frameCount / 300);
     textWeight(map(pacing, -1, 1, 100, 900));
 
-    let yOffset = -windowHeight / 2 + 120;
+    let yOffset = -windowHeight / 2 + 250;
     text(currentTopWord, 0, yOffset);
     text(currentBottomWord, 0, yOffset + 80);
 
