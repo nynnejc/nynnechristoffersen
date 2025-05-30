@@ -49,6 +49,9 @@ canvas {
   z-index: 0;
   pointer-events: none;
 }
+.content {
+  margin-left: 200px;
+}
 
 
 h1 {
@@ -104,6 +107,7 @@ p a:hover {
 
 .navbar {
   position: fixed;
+  background-color: #F3EEEA;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -152,6 +156,9 @@ p a:hover {
 
   #menu-toggle:checked~.navbar {
     transform: translateX(0);
+  }
+    .layout {
+    margin-left: 0;
   }
 }
 
