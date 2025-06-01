@@ -6,7 +6,7 @@
 }
 
 body {
-   background-color: transparent;
+  background-color: transparent;
   background-attachment: fixed;
   background-repeat: no-repeat;
   overflow-x: hidden;
@@ -190,7 +190,7 @@ p a:hover {
     z-index: 1000;
   }
 
- #menu-toggle:checked ~ .layout .navbar {
+  #menu-toggle:checked~.layout .navbar {
     transform: translateX(0);
   }
 
@@ -198,7 +198,16 @@ p a:hover {
     margin-left: 0;
     flex-direction: column;
   }
+
+  .text-in-box {
+    margin: 3%;
+  }
+
+  .shadow-of-shadows {
+    padding: 5%;
+  }
 }
+
 #menu-toggle {
   display: none;
 }
