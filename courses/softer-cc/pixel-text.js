@@ -58,7 +58,8 @@ function draw() {
     fill("#FFA4E0");
     stroke("#FF3B0F");
     textFont(font);
-    textSize(100);
+    let baseSize = min(windowWidth, windowHeight) / 12;
+    textSize(baseSize);
 
     let pacing = sin(frameCount / 300);
     textWeight(map(pacing, -1, 1, 100, 900));
