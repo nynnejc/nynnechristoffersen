@@ -64,10 +64,10 @@ p a:hover {
 .top-index {
   display: flex;
   flex-direction: row;
-  border-top: 1px solid #21254D;
-  border-left: 0px solid #21254D;
+  border-top: 2px solid #21254D;
+  border-left: 2px solid #21254D;
   border-right: 2px solid #21254D;
-  border-bottom: 1px solid #21254D;
+  border-bottom: 0px solid #21254D;
   border-bottom: 2px solid #21254D;
 }
 
@@ -77,7 +77,7 @@ p a:hover {
 
 .hello-box {
   border-top: 0px solid #21254D;
-  border-left: 0px solid #21254D;
+  border-left: 2px solid #21254D;
   border-bottom: 2px solid #21254D;
   border-right: 2px solid #21254D;
   padding: 4%;
@@ -96,12 +96,35 @@ p a:hover {
   min-height: 100vh;
 }
 
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
 .content-area {
   flex: 1;
   box-sizing: border-box;
   border-top: 0px solid #21254D;
-  border-left: 0px solid #21254D;
-  border-bottom: 1px solid #21254D;
+  
+}
+
+.content-area,
+.content {
+  flex: 1;
+  max-width: 100%;
 }
 
 .burger {
@@ -125,6 +148,7 @@ p a:hover {
 /* Sidebar styles */
 .navbar {
   background-color: #CFC9F4;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
