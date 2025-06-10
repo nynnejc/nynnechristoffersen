@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/style/open-lab.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softer Creative Coding Course</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.0.0/lib/p5.min.js"></script>
+
+</head>
+
+<body>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <div class="layout">
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="./index-cc.html">Index</a>
+                <a href="./softer-cc.html">p5.js</a>
+                <a href="./open-lab.html">Open Coding Lab</a>
+                <a href="./resources-cc.html">Resources</a>
+            </div>
+        </nav>
+
+        <div class="content-area">
+            <div class="top-index">
+                <h1 class="headline">Open Coding Lab</h1>
+            </div>
+            <div class="hello-box">
+                <p>
+                    Open Coding Lab is a space where you are invited to bring in a coding project you want to get
+                    support on, or just to hack away in good company with snacks.
+                    We are happy to help with all and any kinds of projects, but are also more than welcome to absolute
+                    beginners. If you do not have a project to bring, you can also be matched with a learning project or
+                    tutorial that fits with your interest and goals.
+                </p>
+            </div>
+
+            <div class="shadow-of-shadows">
+                <div class="text-in-box">
+                    <h3>Tutorials</h3>
+                    <ul>
+                        <li>
+                            <p><a href="https://www.youtube.com/watch?v=LGQuIIv2RVA&list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-"
+                                    target="_blank" rel="noopener noreferrer">Video: "HTML and CSS for Beginners Part 1:
+                                    Introduction to HTML" - Kevin Powell</a>.</p>
+                        </li>
+                        <li>
+                            <p><a href="https://htmlforpeople.com/" target="_blank" rel="noopener noreferrer">HTML for
+                                    people - Blake Watson</a>.</p>
+                        </li>
+                        <li>
+                            <p><a href="https://learn.shayhowe.com/" target="_blank" rel="noopener noreferrer">Learn to
+                                    Code HTML & CSS - Shay Howe</a>.</p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="shadow-of-shadows">
+                <div class="text-in-box">
+                    <h3>JS</h3>
+                    <ul>
+                        <li>
+                            <p><a href="https://www.w3schools.com/js/js_intro.asp" target="_blank"
+                                    rel="noopener noreferrer">W3: JS Intro</a>.</p>
+                        </li>
+                        <li>
+                            <p><a href="https://www.codecademy.com/learn/learn-javascript-fundamentals" target="_blank"
+                                    rel="noopener noreferrer">Codeacademy: JS Fundamentals</a>.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('show');
+        }
+    </script>
+    <script src="regnbue.js"></script>
+</body>
+
+</html>
