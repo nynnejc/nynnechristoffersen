@@ -106,20 +106,6 @@ p a:hover {
   align-items: center;
 }
 
-.about-img::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("./blu.png") center/cover no-repeat;
-  opacity: 0;
-  border-radius: 50%;
-  transition: opacity 0.3s ease;
-}
-
-.about-img:hover::after {
-  opacity: 1;
-}
-
 .courses {
   background-color: #f6e666;
 }
