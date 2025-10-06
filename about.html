@@ -1,181 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="./assets/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./assets/moon.gif">
+    <link rel="stylesheet" href="./assets/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/moon.gif" />
     <title>Nynne Just christoffersen</title>
+  </head>
 
-    <!-- Include p5.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
-</head>
-
-<body class="about">
+  <body class="about">
     <script>
-        const titles = [
-            "I ♡ laptop",
-            "learning + teaching",
-            "ok, computer",
-            "bless this mess",
-            "resolving deltas",
-            "my job is internet",
-            "wait wait wait",
-            "serenity of the tabs",
-            "nearly right but not quite",
-            "mood poisoning",
-            "buffering....",
-            "i surrender",
-            "Ꝏ ထ ∞ lines of code",
-            "there are no ☁️ ☁️ ☁️",
-            "emotional support tabs",
-            "missing ';' on line 23",
-            "community of my kind",
-            "<head></head><body></body>",
-            "yikes!",
-            "now draw the rest of the 𐂅",
-            "error!",
-            "let it grow",
-            "shared imagined context",
-            "pink gradient",
-            "detached head state",
-            "debigging with my mind",
-            "energy drink goblin",
-            "teach me",
-            "compressing objects",
-            "ego death",
-            "why does it work?",
-            "coding praxis",
-            "never did this before",
-            "softer",
-            "٩(╬ʘ益ʘ╬)۶",
-            "let me merge or i'll cry",
-            "shhh! little treat is talking",
-            "compiling, I hope",
-            "snack overflow",
-            "intersectional",
-            "works on my machine",
-            "no fucking thanks",
-            "good at googling",
-            "unbothered. moisturized. happy",
-            "FAFO",
-            "a computer can never find out",
-            "I'm trying to grow",
-            "index of indexes",
-            "thinking about programming",
-            "effort over result",
-            "the why of it all",
-            "[❃, ❊, ✲, ✿, ⚘]",
-            "your cloud is drinking my river",
-            "Enumerating objects",
-            "strength in numbers",
-            "wrong kind of cookie",
-            "women in hypertext",
-            "(｡╯︵╰｡)",
-            "feeling unreal",
-            "softer",
-            "anthropocene post modernism",
-            "cringe but free",
-            "looping through a list",
-            "machines of loving grace",
-            "unlimited screen time",
-            "ima heal this pattern",
-            "compute cuter",
-            "deeply embarassed",
-            "whoami",
-            "softer",
-            "another world is possible",
-            "when do i stop pretending",
-            "feminism(s)",
-            "⟢ are made under pressure",
-            "the problem isn't the problem",
-            "( ˘⌣˘)♡(˘⌣˘ )",
-            "everything already exists",
-            "weaving a web",
-            "information != knowledge",
-            "how would you feel",
-            "divine and unlimited powers",
-            "vibe code feels",
-            "⏾",
-            "thriving flourishing in my lane",
-            "we need you here",
-            "tech debt",
-            "softer",
-            "everything happens so much",
-            "alive internet theory",
-            "pink for feminism",
-            "on my puter",
-            "cyberspace is the place",
-            "not good enough for imposter syndrome",
-            "software gardening",
-            "cyborg manifesto",
-            "ཐི༏ཋྀ",
-            "we accept her, one of us",
-            "call a friend",
-            "what does it take to bloom",
-            "no dumb question"
-        ];
+      const titles = [
+        "I ♡ laptop",
+        "learning + teaching",
+        "ok, computer",
+        "bless this mess",
+        "resolving deltas",
+        "my job is internet",
+        "wait wait wait",
+        "serenity of the tabs",
+        "nearly right but not quite",
+        "mood poisoning",
+        "buffering....",
+        "i surrender",
+        "Ꝏ ထ ∞ lines of code",
+        "there are no ☁️ ☁️ ☁️",
+        "emotional support tabs",
+        "missing ';' on line 23",
+        "community of my kind",
+        "<head></head><body></body>",
+        "yikes!",
+        "now draw the rest of the 𐂅",
+        "error!",
+        "let it grow",
+        "shared imagined context",
+        "pink gradient",
+        "detached head state",
+        "debigging with my mind",
+        "energy drink goblin",
+        "teach me",
+        "compressing objects",
+        "ego death",
+        "why does it work?",
+        "coding praxis",
+        "never did this before",
+        "softer",
+        "٩(╬ʘ益ʘ╬)۶",
+        "let me merge or i'll cry",
+        "shhh! little treat is talking",
+        "compiling, I hope",
+        "snack overflow",
+        "intersectional",
+        "works on my machine",
+        "no fucking thanks",
+        "good at googling",
+        "unbothered. moisturized. happy",
+        "FAFO",
+        "a computer can never find out",
+        "I'm trying to grow",
+        "index of indexes",
+        "thinking about programming",
+        "effort over result",
+        "the why of it all",
+        "[❃, ❊, ✲, ✿, ⚘]",
+        "your cloud is drinking my river",
+        "Enumerating objects",
+        "strength in numbers",
+        "wrong kind of cookie",
+        "women in hypertext",
+        "(｡╯︵╰｡)",
+        "feeling unreal",
+        "softer",
+        "anthropocene post modernism",
+        "cringe but free",
+        "looping through a list",
+        "machines of loving grace",
+        "unlimited screen time",
+        "ima heal this pattern",
+        "compute cuter",
+        "deeply embarassed",
+        "whoami",
+        "softer",
+        "another world is possible",
+        "when do i stop pretending",
+        "feminism(s)",
+        "⟢ are made under pressure",
+        "the problem isn't the problem",
+        "( ˘⌣˘)♡(˘⌣˘ )",
+        "everything already exists",
+        "weaving a web",
+        "information != knowledge",
+        "how would you feel",
+        "divine and unlimited powers",
+        "vibe code feels",
+        "⏾",
+        "thriving flourishing in my lane",
+        "we need you here",
+        "tech debt",
+        "softer",
+        "everything happens so much",
+        "alive internet theory",
+        "pink for feminism",
+        "on my puter",
+        "cyberspace is the place",
+        "not good enough for imposter syndrome",
+        "software gardening",
+        "cyborg manifesto",
+        "ཐི༏ཋྀ",
+        "we accept her, one of us",
+        "call a friend",
+        "what does it take to bloom",
+        "no dumb question",
+      ];
 
-        let index = 0;
+      let index = 0;
 
-        setInterval(() => {
-            document.title = titles[index];
-            index = (index + 1) % titles.length;
-        }, 2000);
+      setInterval(() => {
+        document.title = titles[index];
+        index = (index + 1) % titles.length;
+      }, 2000);
     </script>
 
     <header>
-        <div class="box-menu">
-            <a href="index.html"><span>༓☾</span></a>
-            <a href="courses.html"><span>.✩</span></a>
-            <a href="library.html"><span>˚♡</span></a>
-            <a href="about.html"><span>◐▪</span></a>
-            <a href="https://www.kaerecomputer.dk/" target="_blank" rel="noopener noreferrer"><span>‧͙❋</span></a>
-        </div>
-        <div class="nav">
-            <nav>
-                <ul>
-                    <li><a href="index.html">INDEX</a></li>
-                    <li><a href="courses.html">COURSES</a></li>
-                    <li><a href="library.html">LIBRARY</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="https://www.kaerecomputer.dk/" target="_blank" rel="noopener noreferrer">BLOG</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="box-menu">
+        <a href="index.html"><span>༓☾</span></a>
+        <a href="about.html"><span>◐▪</span></a>
+        <a href="courses.html"><span>.✩</span></a>
+        <a href="library.html"><span>˚♡</span></a>
+        <a
+          href="https://www.kaerecomputer.dk/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span>‧͙❋</span></a
+        >
+      </div>
+      <div class="nav">
+        <nav>
+          <ul>
+            <li><a href="index.html">INDEX</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="courses.html">COURSES</a></li>
+            <li><a href="library.html">LIBRARY</a></li>
+            <li>
+              <a
+                href="https://www.kaerecomputer.dk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >BLOG</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <div class="container-body">
-            <div class="korpus-text">
-                <h1>About</h1>
-                <p>Hi I&#x27;m Nynne Just Christoffersen I am a software developer, teacher, writer and
-                    occasional podcaster.
-                </p>
-                <p>I teach programming classes at the Copenhagen School of Design and Technology <a
-                        href="https://kea.dk/" target="_blank" rel="noopener noreferrer">(KEA)</a>.
-                    I am also a member of <a href="https://cybernauterne.dk/" target="_blank"
-                        rel="noopener noreferrer">Cybernauterne</a> tech collective.
-                </p>
-                <p>I am always happy to hear about the cool project you&#x27;ve made or any ideas
-                    you want to share. You can <a href="mailto:nynnejc@gmail.com" target="_blank"
-                        rel="noopener noreferrer">email</a>
-                    me. I have a <a href="https://www.kaerecomputer.dk/" target="_blank"
-                        rel="noopener noreferrer">newsletter</a>. Find me on <a href="https://github.com/nynnejc"
-                        target="_blank" rel="noopener noreferrer">Github</a>
-                    or see you in <a href="https://helvede.net/@nynne" target="_blank"
-                        rel="noopener noreferrer">hell</a>.
-                </p>
-                <p>This website has been hand-made by me in html and css, and all the source code for it can be perused
-                     <a href="https://github.com/nynnejc/nynnechristoffersen" target="_blank" rel="noopener noreferrer">here</a>.</p>
-            </div>
-            <div class="container-space"></div>
+      <div class="container-body-about">
+        <div class="korpus-text">
+          <h1>About</h1>
+          <p>
+            Hi and welcome to my website.
+          </p>
+          <p> I&#x27;m Nynne. I am a software developer,
+            teacher, writer and occasional podcaster.</p>
+          <p>I am also a member of
+            <a
+              href="https://cybernauterne.dk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Cybernauterne</a
+            >
+            tech collective.
+          </p>
+          <p>
+            I am always happy to hear about the cool project you&#x27;ve made or
+            any ideas you want to share. You can
+            <a
+              href="mailto:nynnejc@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >email</a
+            >
+            me. I have a
+            <a
+              href="https://www.kaerecomputer.dk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >newsletter</a
+            >. Find me on 
+            <a
+              href="https://www.are.na/nynne-christoffersen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >are.na</a
+            >,
+            <a
+              href="https://github.com/nynnejc"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Github</a
+            >
+            or see you in
+            <a
+              href="https://helvede.net/@nynne"
+              target="_blank"
+              rel="noopener noreferrer"
+              >hell</a
+            >.
+          </p>
+          <p>
+           - - -
+          </p>
+          <p>
+            This website has been hand-made by me in html and css, and all the
+            source code for it can be perused
+            <a
+              href="https://github.com/nynnejc/nynnechristoffersen"
+              target="_blank"
+              rel="noopener noreferrer"
+              >here</a
+            >.
+          </p>
         </div>
+        <div class="about-img">
+          <img src="./assets/tru.png" alt="programmer sitting on a chair" />
+        </div>
+      </div>
     </main>
-
-    <!-- Load your p5.js sketch -->
-    <script src="./assets/regnbue.js"></script>
-</body>
-
+  </body>
 </html>
