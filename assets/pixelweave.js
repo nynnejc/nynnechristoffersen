@@ -6,26 +6,13 @@ let patternHeight = 37;
 let pixelColors; 
 
 function setup() {
-  let cnv = createCanvas(windowWidth, windowHeight);
-  cnv.position(0, 0);      // position canvas at top-left
-  cnv.style('z-index', '-1'); // send canvas behind other content
-  cnv.style('position', 'fixed'); // keeps it fixed during scroll
+  createDynamicCanvas();
 
   warps = Math.ceil(width / loomSize) + patternWidth;
   wefts = Math.ceil(height / loomSize) + patternHeight;
 
-  stitches = new Array(warps);
-  pixelColors = new Array(warps);
-  for (let x = 0; x < warps; x++) {
-    stitches[x] = new Array(wefts).fill(false);
-    pixelColors[x] = new Array(wefts).fill(color(235,141,77)); 
-  }
-
-  for (let x = 0; x < warps; x += patternWidth) {
-    for (let y = 0; y < wefts; y += patternHeight) {
-      addPattern(x, y);
-    }
-  }
+  initializeStitches();
+  fillPatterns();
 }
 
 function draw() {
@@ -33,6 +20,40 @@ function draw() {
   drawGrid();
   drawPattern();
   drawHoverEffect();
+}
+
+function createDynamicCanvas() {
+  let cnv = createCanvas(windowWidth, windowHeight);
+  cnv.position(0, 0);
+  cnv.style('z-index', '-1');
+  cnv.style('position', 'fixed');
+}
+
+function initializeStitches() {
+  stitches = new Array(warps);
+  pixelColors = new Array(warps);
+  for (let x = 0; x < warps; x++) {
+    stitches[x] = new Array(wefts).fill(false);
+    pixelColors[x] = new Array(wefts).fill(null); 
+  }
+}
+
+function fillPatterns() {
+  for (let x = 0; x < warps; x += patternWidth) {
+    for (let y = 0; y < wefts; y += patternHeight) {
+      addPattern(x, y);
+    }
+  }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+
+  warps = Math.ceil(width / loomSize) + patternWidth;
+  wefts = Math.ceil(height / loomSize) + patternHeight;
+
+  initializeStitches();
+  fillPatterns();
 }
 
 function drawPattern() {
