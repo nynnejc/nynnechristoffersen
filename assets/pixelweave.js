@@ -1,5 +1,5 @@
 let stitches;
-let loomSize = 15;
+let loomSize = 14;
 let warps, wefts;
 let patternWidth = 44;
 let patternHeight = 37;
@@ -16,17 +16,18 @@ function setup() {
 }
 
 function draw() {
-  background(240,210,209);
+  background(255, 255, 255);
   drawGrid();
   drawPattern();
   drawHoverEffect();
 }
 
 function createDynamicCanvas() {
-  let cnv = createCanvas(windowWidth, windowHeight);
+  let bodyHeight = document.body.scrollHeight;
+  let cnv = createCanvas(windowWidth, bodyHeight);
   cnv.position(0, 0);
   cnv.style('z-index', '-1');
-  cnv.style('position', 'fixed');
+  cnv.style('position', 'absolute');
 }
 
 function initializeStitches() {
@@ -47,7 +48,7 @@ function fillPatterns() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, document.body.scrollHeight);
 
   warps = Math.ceil(width / loomSize) + patternWidth;
   wefts = Math.ceil(height / loomSize) + patternHeight;
@@ -61,7 +62,7 @@ function drawPattern() {
   for (let i = 0; i < warps; i++) {
     for (let j = 0; j < wefts; j++) {
       if (stitches[i][j]) {
-        fill(pixelColors[i][j] || color(235,141,77));
+        fill(pixelColors[i][j] || color(147, 233, 190));
         square(i * loomSize, j * loomSize, loomSize);
       }
     }
@@ -70,7 +71,7 @@ function drawPattern() {
 
 function drawHoverEffect() {
   let t = millis() * 0.001;
-  let radius = 4;
+  let radius = 10;
 
   let mWarp = Math.floor(mouseX / loomSize);
   let mWeft = Math.floor(mouseY / loomSize);
@@ -92,7 +93,7 @@ function drawHoverEffect() {
 }
 
 function drawGrid() {
-  stroke(200);
+  stroke(225);
   for (let x = 0; x < width; x += loomSize) line(x, 0, x, height);
   for (let y = 0; y < height; y += loomSize) line(0, y, width, y);
 }
