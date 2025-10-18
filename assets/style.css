@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica;
+  font-family: inherit;
 }
 
 body {
@@ -21,6 +21,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 30px;
+  font-family: Arial, Helvetica;
 }
 
 main {
@@ -43,6 +44,7 @@ p {
 
 p a {
   color: black;
+  font-weight: bold;
 }
 
 p a:hover {
@@ -81,13 +83,64 @@ p a:hover {
 .container-space {
   padding: 10px;
 }
+.collapsible {
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  font-size: clamp(24px, 25px, 26px);
+  font-weight: bold;
+  font-family: "whoismono";
+}
 
-.index {
-  background-color: #b0c4be;
+.active,
+.collapsible:hover {
+  color: blue;
+}
+
+.collapsible::after {
+  content: "▶";
+  float: left;
+  margin-right: 2%;
+}
+
+.collapsible.active::after {
+  content: "▼";
+}
+
+.content {
+  padding: 2%;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  display: none;
+  overflow: hidden;
+  font-size: clamp(20px, 21px, 23px);
+}
+
+.content a {
+  font-weight: bold;
+  background: linear-gradient(0deg, rgb(86, 86, 250), rgb(245, 108, 245))
+    no-repeat right bottom / 0 var(--bg-h);
+  --bg-h: 100%;
+}
+
+.content a:where(:hover, :focus-visible) {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content ul li a {
+  font-weight: bold;
 }
 
 .about {
-  background-color: #0E6D66;
+  background-color: #0e6d66;
 }
 
 .about-img img {
@@ -99,32 +152,30 @@ p a:hover {
 }
 
 .about-img {
-    flex: 1 1 40%;
+  flex: 1 1 40%;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.courses {
-  /* background-color: #f6e666; */
-}
-
 .library {
   background-color: #af949d;
 }
 
-.shadow-of-shadows {
+.shadow-box-bottom {
   background-color: #ffff;
   box-shadow: rgb(0, 0, 224) 1px 1px 1px 2px inset,
     rgb(255, 255, 255) 10px -10px 0px -3px, rgb(0, 0, 224) 10px -10px,
     rgb(255, 255, 255) 20px -20px 0px -3px, rgb(0, 0, 224) 20px -20px,
     rgb(255, 255, 255) 30px -30px 0px -3px, rgb(0, 0, 224) 30px -30px,
     rgb(255, 255, 255) 40px -40px 0px -3px, rgb(0, 0, 224) 40px -40px;
-  padding: 2%;
-  position: fixed;
+  padding: 0.7%;
+  position:fixed;
   bottom: 2%;
   right: 5%;
+  font-size: small;
+  margin-top: auto
 }
 
 .nav {
@@ -223,7 +274,7 @@ p a:hover {
     font-weight: bolder;
     color: black;
   }
-  .shadow-of-shadows {
+  .shadow-box-bottom {
     padding: 2%;
     position: fixed;
     bottom: 10%;
