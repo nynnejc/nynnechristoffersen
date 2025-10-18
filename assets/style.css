@@ -84,6 +84,7 @@ p a:hover {
   padding: 10px;
 }
 .collapsible {
+  all: unset;
   background-color: transparent;
   cursor: pointer;
   width: 100%;
