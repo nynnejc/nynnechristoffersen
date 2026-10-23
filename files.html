@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/moon.gif" />
+    <title>Nynne Just christoffersen</title>
+  </head>
+
+  <body class="courses">
+    <script>
+      const titles = ["Convivial", "Coding", "for", "Beginners"];
+
+      let index = 0;
+
+      setInterval(() => {
+        document.title = titles[index];
+        index = (index + 1) % titles.length;
+      }, 2000);
+    </script>
+    <header>
+      <div class="box-menu">
+        <a href="index.html"><span>༓☾</span></a>
+      </div>
+      <div class="nav">
+        <nav>
+          <ul>
+            <li><a href="index.html">INDEX</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container-body-about">
+        <div class="container-body">
+          <div class="korpus-text">
+            <h1>Files for Processing Community Day in Aarhus</h1>
+            <p>
+              This is a collection of files for the PCD workshop:
+            </p>
+            <p>
+              <a
+                href="/assets/workshop-files/Convivial Workshop PCD århus.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >slides in PDF format</a
+              >
+            </p>
+            <p>
+              <a
+                href="/assets/workshop-files/Convivial Workshop PCD århus.pptx"
+                target="_blank"
+                rel="noopener noreferrer"
+                >slides in PPTX format</a
+              >
+            </p>
+
+            <p>
+              <a
+                href="/assets/workshop-files/Exercise 1_ The Skull 💀.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><b>Exercise 1: The Skull 💀</b></a
+              >
+            </p>
+
+            <p>
+              <a
+                href="/assets/workshop-files/Exercise 2_ Moving Shapes 🏐.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><b>Exercise 2: Moving Shapes 🏐</b></a
+              >
+            </p>
+
+            <p>
+              <a
+                href="/assets/workshop-files/website-starterpack.zip"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><b
+                  >Starterpack files for making a simple website with a p5.js
+                  drawing on it</b
+                ></a
+              >
+            </p>
+          </div>
+          <div class="container-space"></div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="./assets/pixelweave.js"></script>
+  </body>
+</html>
